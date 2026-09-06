@@ -84,3 +84,43 @@ Metadata that makes each pokemon unique.
 ## Pokemon Scene
 
 Base reusable scene that hosts all components as children. Creating a new pokemon = instantiate the scene, assign a SpeciesResource, and configure instance data (nickname, ivs, moves, etc.).
+
+
+## Folder Structure
+
+Hybrid component + feature layout. Component `.tscn` and `.gd` files are colocated in per-component folders. Resource schemas (code) are split from resource content (`.tres` data).
+
+```
+res://
+├── addons/                    # third-party plugins
+├── assets/                    # raw art/audio
+│   ├── sprites/pokemon/
+│   ├── sprites/ui/
+│   └── audio/{bgm,sfx,cries}/
+├── components/                # reusable component scenes (.tscn + .gd)
+│   ├── state_component/
+│   ├── stat_component/
+│   ├── moves_component/
+│   ├── identity_component/
+│   └── sprite_component/
+├── entities/
+│   └── pokemon/               # pokemon.tscn — composes the components
+├── data/
+│   ├── schemas/               # species_data.gd, move_data.gd (extends Resource)
+│   ├── species/               # bulbasaur.tres, charmander.tres...
+│   ├── moves/                 # tackle.tres, ember.tres...
+│   └── types/                 # type chart
+├── scenes/
+│   ├── battle/
+│   ├── overworld/
+│   └── ui/
+├── src/
+│   ├── autoload/              # GameState, EventBus, AudioManager
+│   └── globals/               # enums, constants
+└── project.godot
+```
+
+Conventions:
+- `snake_case` filenames (Godot cross-platform requirement)
+- one folder per component, `.tscn` + `.gd` colocated
+- no monolithic `scripts/` folder

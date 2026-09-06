@@ -1,17 +1,11 @@
 class_name SpeciesData
 extends Resource
 
-enum Type {
-	NONE,
-	NORMAL, FIRE, WATER, ELECTRIC, GRASS,
-	FIGHTING, GROUND, FLYING, PSYCHIC, GHOST, DRAGON,
-}
-
 @export_group("Types")
 ## Primary type. Must never be NONE.
-@export var type_1: Type = Type.NORMAL
+@export var type_1: PokemonTypes.Type = PokemonTypes.Type.NORMAL
 ## Secondary type. NONE means single-typed.
-@export var type_2: Type = Type.NONE
+@export var type_2: PokemonTypes.Type = PokemonTypes.Type.NONE
 
 @export_group("Base Stats")
 @export_range(1, 255) var base_hp: int = 1
@@ -28,4 +22,4 @@ enum Type {
 @export var moves: Dictionary = {}
 
 func _init() -> void:
-	assert(type_1 != Type.NONE, "SpeciesData.type_1 must not be NONE")
+	assert(type_1 != PokemonTypes.Type.NONE, "SpeciesData.type_1 must not be NONE")

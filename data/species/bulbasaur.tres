@@ -4,6 +4,8 @@
 
 [resource]
 script = ExtResource("1_species")
+id = &"bulbasaur"
+display_name = "Bulbasaur"
 type_1 = 5
 type_2 = 0
 base_hp = 45

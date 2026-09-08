@@ -1,6 +1,14 @@
 class_name SpeciesData
 extends Resource
 
+@export_group("Identity")
+## Stable lookup key. Never shown to the player, never changes.
+## Saves and learnsets reference species by this, not by resource path.
+@export var id: StringName = &""
+## Species name shown to the player. Not the nickname a player gives a caught
+## pokemon — that is instance data on IdentityComponent.
+@export var display_name: String = ""
+
 @export_group("Types")
 ## Primary type. Must never be NONE.
 @export var type_1: PokemonTypes.Type = PokemonTypes.Type.NORMAL

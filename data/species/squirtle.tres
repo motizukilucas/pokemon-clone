@@ -15,4 +15,7 @@ base_sp_attack = 50
 base_sp_defense = 64
 base_speed = 43
 abilities = Array[StringName]([&"torrent"])
-moves = {}
+level_up_moves = {
+1: Array[StringName]([&"tackle"]),
+7: Array[StringName]([&"bubble"])
+}

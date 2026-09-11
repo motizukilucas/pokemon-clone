@@ -15,4 +15,7 @@ base_sp_attack = 65
 base_sp_defense = 65
 base_speed = 45
 abilities = Array[StringName]([&"overgrow"])
-moves = {}
+level_up_moves = {
+1: Array[StringName]([&"tackle"]),
+10: Array[StringName]([&"vine_whip"])
+}

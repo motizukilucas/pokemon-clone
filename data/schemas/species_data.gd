@@ -27,7 +27,9 @@ extends Resource
 @export var abilities: Array[StringName] = []
 
 @export_group("Learnset")
-@export var moves: Dictionary = {}
+## Move ids keyed by the level the pokemon learns them at. A level can teach
+## more than one move, so each value is an array.
+@export var level_up_moves: Dictionary = {}
 
 func _init() -> void:
 	assert(type_1 != PokemonTypes.Type.NONE, "SpeciesData.type_1 must not be NONE")

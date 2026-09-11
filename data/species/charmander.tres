@@ -15,4 +15,7 @@ base_sp_attack = 60
 base_sp_defense = 50
 base_speed = 65
 abilities = Array[StringName]([&"blaze"])
-moves = {}
+level_up_moves = {
+1: Array[StringName]([&"scratch"]),
+7: Array[StringName]([&"ember"])
+}

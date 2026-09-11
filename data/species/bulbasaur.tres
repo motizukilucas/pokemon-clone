@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://data/schemas/species_data.gd" id="1_species"]
-[ext_resource type="Texture2D" path="res://assets/sprites/pokemon/bulbasaur/bulbassaur.png" id="2_sprite"]
+[ext_resource type="Texture2D" path="res://assets/sprites/pokemon/bulbasaur/bulbasaur.png" id="2_sprite"]
 
 [resource]
 script = ExtResource("1_species")

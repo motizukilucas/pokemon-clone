@@ -26,6 +26,10 @@ extends Resource
 @export_group("Abilities")
 @export var abilities: Array[StringName] = []
 
+@export_group("Sprites")
+## One sprite per species for now. Separate front/back and shiny variants later.
+@export var sprite: Texture2D
+
 @export_group("Learnset")
 ## Move ids keyed by the level the pokemon learns them at. A level can teach
 ## more than one move, so each value is an array.

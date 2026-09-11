@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="SpeciesData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="SpeciesData" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://data/schemas/species_data.gd" id="1_species"]
+[ext_resource type="Texture2D" path="res://assets/sprites/pokemon/squirtle/squirtle.png" id="2_sprite"]
 
 [resource]
 script = ExtResource("1_species")
@@ -15,6 +16,7 @@ base_sp_attack = 50
 base_sp_defense = 64
 base_speed = 43
 abilities = Array[StringName]([&"torrent"])
+sprite = ExtResource("2_sprite")
 level_up_moves = {
 1: Array[StringName]([&"tackle"]),
 7: Array[StringName]([&"bubble"])
